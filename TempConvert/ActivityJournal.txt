@@ -4,14 +4,28 @@ Name:
 
 ================================================================
 Start Part 1
-Estimated Time	HH MM
+Estimated Time	72 30
 Plan:
-(Order of implementation, testing approach, etc.)
+- Define variables fahrenheit & celcius as integers 
+- print out a title 
+- utilize a for loop that goes from 0 to 300, incrementing i by 20 
+- assign i to fahrenheit 
+-define celsius equation using fahrenheit 
+- return celsius 
 
 Complete
-Actual Time	HH MM
+Actual Time	156 00
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+
+- I learned that the c syntax does not handle fraction like (5/9) as it the 
+integer it rounds to zero, i had to rewrite the equation using by multplying by
+5 and dividing by 9. 
+
+- spacing was off so i added an if/else statement to reduce a space after i gets
+to 100
+
+-  needed %d to print integer
 
 
 ================================================================
