@@ -7,10 +7,17 @@ int main()
 	for (int i = 0; i <= 300; i += 20)
 	{
 	    //Statements to be executed repeatedly
-		fahrenheit = i;
+	    fahrenheit = i;
 		celsius = (5* (fahrenheit-32))/9;
-		printf("  %d            ", fahrenheit);
-		printf("%d\n", celsius);
+		
+		if (i < 100){
+		    printf("  %d            ", fahrenheit);
+		    printf("%d\n", celsius);
+	    }
+	    else{
+	        printf("  %d            ", fahrenheit);
+		    printf("%d\n", celsius);  
+	    }
 	}
 
 	return celsius;
