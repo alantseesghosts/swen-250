@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main()
 {
-	int fahrenheit;
-	int celsius;
+	float fahrenheit;
+	float celsius;
 	printf("Fahrenheit - Celsius\n");
 	for (int i = 0; i <= 300; i += 20)
 	{
@@ -11,16 +11,14 @@ int main()
 		celsius = (5* (fahrenheit-32))/9;
 		
 		if (i < 100){
-		    printf("  %d            ", fahrenheit);
-		    printf("%d\n", celsius);
+		    printf("  %d            ", i);
+		    printf("%.1f\n", celsius);
 	    }
 	    else{
-	        printf("  %d            ", fahrenheit);
-		    printf("%d\n", celsius);  
+	        printf("  %d           ", i);
+		    printf("%.1f\n", celsius);  
 	    }
 	}
 
-	return celsius;
+	return 0;
 }
-
-
