@@ -3,46 +3,16 @@ SWEN-250 Activity Reflection
 Name:Gideon Wikina
 
 ================================================================
-Start Part 1
-Estimated Time	72 30
+Estimated Time	04 00
 Plan:
-- Define variables fahrenheit & celcius as integers 
-- print out a title 
-- utilize a for loop that goes from 0 to 300, incrementing i by 20 
-- assign i to fahrenheit 
--define celsius equation using fahrenheit 
-- return celsius 
+- download starter code
+- add additional variables to simulate a the end of a word by using spaces
+- add cases an increment line, word, and charcters accordingly
 
 Complete
-Actual Time	06 00
+Actual Time	02 00
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
 
-- I learned that the c syntax does not handle fraction like (5/9) as it the 
-integer it rounds to zero, i had to rewrite the equation using by multplying by
-5 and dividing by 9. 
-
-- spacing was off so i added an if/else statement to reduce a space after i gets
-to 100
-
--  needed %d to print integer
-
-
-================================================================
-Start Part 2
-Estimated Time	24 00
-Plan:
-- copy the chart1.c 
-- change ints to floats 
-- return 0 instead of celsius 
-
-Complete
-Actual Time	01 00
-Observations:
-(Lessons learned, problems encountered, obstacles overcome, etc.)
-- needed to change d% to %f
-- to round to the nearest tenth I needed to add a .1 infront of the f
-
-
-
-================================================================
+Overall, this was a  very simple program. Did not encounter too  many issues 
+except for small syntax errors. 
