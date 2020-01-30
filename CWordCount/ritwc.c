@@ -10,21 +10,21 @@ int main() {
 	int tot_lines = 0 ;	/* total lines */
 	int tot_words = 0 ;	/* total words */
 
-	int in_space = 1;
-    	int c, last = '\n';
+	int space = 1;
+    int character, last = '\n';
 
-	while ((c = getchar()) != EOF) {
-        last = c;
+	while ((character = getchar()) != EOF) {
+        last = character;
         tot_chars++;
-        if (isspace(c)) {
-            in_space = 1;
-            if (c == '\n') {
+        if (isspace(character)) {
+            space = 1;
+            if (character == '\n') {
                 tot_lines++;
             }
         } 
 	else {
-            tot_words += in_space;
-            in_space = 0;
+            tot_words += space;
+            space = 0;
         }
     }
     if (last != '\n') {
