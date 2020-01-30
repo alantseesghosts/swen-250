@@ -1,0 +1,18 @@
+SWEN-250 Activity Reflection
+
+Name:Gideon Wikina
+
+================================================================
+Estimated Time	04 00
+Plan:
+- download starter code
+- add additional variables to simulate a the end of a word by using spaces
+- add cases an increment line, word, and charcters accordingly
+
+Complete
+Actual Time	02 00
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+Overall, this was a  very simple program. Did not encounter too  many issues 
+except for small syntax errors. 
