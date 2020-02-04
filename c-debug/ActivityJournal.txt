@@ -1,0 +1,35 @@
+SWEN-250 Activity Reflection
+
+Name:Gideon Wikina
+
+================================================================
+Start Part 1
+Estimated Time	3 30
+Plan:
+- Follow the directions and complete my task
+- use vim to edit
+
+Complete
+Actual Time	01: 15
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+- Accidentally changed if statement instead of while loop, syntax error. 
+Overcame this obstacle by starting over. 
+
+================================================================
+Start Part 2
+Estimated Time	00 10
+Plan:
+- copy the prime.c 
+- change makefile config
+
+Complete
+Actual Time	00 06
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- no lesson learned, it was pretty straight forward.
+
+
+
+================================================================
