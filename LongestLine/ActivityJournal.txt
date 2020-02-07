@@ -1,0 +1,50 @@
+SWEN-250 Activity Reflection
+
+Name:Gideon Wikina
+
+================================================================
+Start Part 1
+Estimated Time	01 00
+Plan:
+- Define variables for index and characters as ints
+- add each character in the line to the array 
+- if chracter is a new line assign that value at that index as a newline and 
+then increment the index
+
+Complete
+Actual Time	00 30
+Compile Attempts: 1
+Compile errors: 0
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+- Hardest obstacle was attempting to figure out how to overcome the newLine.
+Eventually figured it out by using a conditional and incvreasing the index 
+as soon as that eneter key return value is found. 
+
+
+================================================================
+Start Part 2
+Estimated Time	01 00
+Plan:
+- implement copy function
+- create a variable to store the max length and an array to store the maxlines
+-conditional if current length is greater than max length, then then current 
+length becomes the max length. Then this line is copied.
+- print out line after EOF this entered
+
+Complete
+Actual Time	00 45
+Compile Attempts: 3 
+Comile Errors: 2
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Biggest obstacle was understanding the main function. Was unsure how to go 
+about it. I guess I didn't really understand the relation to copy function as 
+it takes in two separate arrays. After, I was made aware that I needed to
+create a second array, the process made more sense.
+- a couple of spelling errors made my program unable to compile.
+
+
+
+================================================================
