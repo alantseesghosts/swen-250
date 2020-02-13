@@ -36,11 +36,11 @@ int get_field(f_string field) {
 	/* FILL THIS IN */
     char end = '\0';
     int nchar = 0;
-    int i=0;
+    int i = 0;
     while(!is_end_of_field(nchar  = getchar())) {
         field[i] = nchar;    
         i++;
-    }
+	}
     field[i] = '\0';
     if(nchar == EOF) {
         end = EOF;
@@ -51,7 +51,7 @@ int get_field(f_string field) {
     else {
         end = ',';
     }
-    return (int)end;
+    return (int) end;
 }
 
 /*
@@ -66,24 +66,20 @@ csv_line get_line() {
 	/* FILL THIS IN */
     csv_line line;
     line.nfields = 0;
-    int i = 0;
     while(true) {
-
-      char fields = get_field(line.field[line.nfields]);
-      line.nfields = line.nfields + 1;
-      if (fields == '\n')
-            //a wild \n appeared
+      char field = get_field(line.field[line.nfields]);
+      line.nfields++;
+      if (field == '\n')
             return line;
-      if (fields ==  EOF){
-            //a wild EOF appeared
+      if (field ==  EOF){
             line.nfields = 0;
             return line;
 	   }
-       if (fields ==  ',')
-            //a wild comma appeared
+       if (field ==  ',')
             break;
         }
-    }
+    return line;
+}
 
 /*
  * Print a CSV line, associating the header fields with the
@@ -94,6 +90,10 @@ csv_line get_line() {
 
 void print_csv(csv_line header, csv_line data) {
 	/* FILL THIS IN */
+    int i=0;
+    for (i = 0; i < min(header.nfields,data.nfields); i++) {
+        printf("%s = %s\n", header.field[i], data.field[i]);
+    }
 }
 
 /*
