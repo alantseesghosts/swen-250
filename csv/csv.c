@@ -64,7 +64,26 @@ int get_field(f_string field) {
 
 csv_line get_line() {
 	/* FILL THIS IN */
-}
+    csv_line line;
+    line.nfields = 0;
+    int i = 0;
+    while(true) {
+
+      char fields = get_field(line.field[line.nfields]);
+      line.nfields = line.nfields + 1;
+      if (fields == '\n')
+            //a wild \n appeared
+            return line;
+      if (fields ==  EOF){
+            //a wild EOF appeared
+            line.nfields = 0;
+            return line;
+	   }
+       if (fields ==  ',')
+            //a wild comma appeared
+            break;
+        }
+    }
 
 /*
  * Print a CSV line, associating the header fields with the
