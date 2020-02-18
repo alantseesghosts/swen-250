@@ -1,0 +1,34 @@
+SWEN-250 Activity Reflection
+
+Name: Gideon Wikina
+
+================================================================
+Implement code to pass all unit tests
+
+Estimated Time	02 30
+Plan:
+1) get_field
+- define variables: end = '\0', nchar = 0; i = 0
+- while not at the end of the field, the field array will be assigned the char
+value at that index
+- define cases that may define the end and assign  that char value to 
+the variable end 
+- return end casted as an int
+2) get_line
+- define variables: line as a csv_line, line.nfields = 0; fieds = get_field(line.field[line.nfields])
+- return line depending on the cases defined the fields 
+
+3) print csv 
+- while loop to print out components of the field
+Complete
+Actual Time	03 00
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Test 7, 8, 9, 10 failed as it was not accounting for some fields and 
+"control reaches end of non void function
+- Added return statement at the end of get_line and 7, 9, 10   
+failed 
+- replaced if statement with a switch case and everything was good, I assume 
+that I was not accounting for the comma case.
+
+

@@ -74,14 +74,11 @@ csv_line get_line() {
    	switch(fields) {
 
         case '\n':
-            //a wild \n appeared
             return line;
         case EOF:
-            //a wild EOF appeared
             line.nfields = 0;
             return line;
         case ',':
-            //a wild comma appeared
             break;
         } 
     }
