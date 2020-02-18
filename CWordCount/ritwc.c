@@ -32,7 +32,6 @@ int main() {
         tot_lines++;
     }
 
-    printf("Lines, Words, Characters\n");
-    printf("%3d     %3d       %3d\n", tot_lines, tot_words, tot_chars);
+    printf("%3d %3d %3d\n", tot_lines, tot_words, tot_chars);
     return 0 ;
 }
