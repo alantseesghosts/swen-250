@@ -41,7 +41,16 @@ static bool prefix(char *s, char *pre) {
  * Copy <string> to <result> while removing all occurrences of <ch>.
  */
 void filter_ch_index(char string[], char result[], char ch) {
-	result[0] = NUL ; // placeholder
+	int i = 0 ;
+	int k = 0 ;
+	while(string[i] != NUL) {
+		if(string[i] != ch){
+			result[k] = string[i] ;
+			k++ ;
+		}
+		i++ ;
+	}
+	result[k] = NUL ;
 }
 
 /*
@@ -53,7 +62,20 @@ void filter_ch_index(char string[], char result[], char ch) {
  *****
  */
 char *filter_ch_ptr(char *string, char ch) {
-	return strcpy(malloc(1), "") ; // placeholder
+		char *p_copy = malloc(strlen(string)+1) ;
+	char *p = p_copy ;
+	while(string[0]!=NUL){
+		if(string[0]!=ch){
+			p[0] = string[0] ;
+			p++ ;
+		}
+		string++ ;
+	}
+	p[0] = NUL ;
+	p = malloc(strlen(p_copy)+1) ;
+	strcpy(p,p_copy) ;
+	free(p_copy) ;
+	return p ; // placeholder
 }
 
 /*
@@ -61,7 +83,15 @@ char *filter_ch_ptr(char *string, char ch) {
  * any characters in <remove>.
  */
 void filter_any_index(char string[], char result[], char remove[]) {
-	result[0] = NUL ;
+	int i = 0 ;
+	char copy[strlen(string)] ;
+	strcpy(copy,string) ;
+	strcpy(result,string) ;
+	while(i<strlen(remove)){
+		filter_ch_index(copy,result,remove[i]);
+		strcpy(copy,result) ;
+		i++ ;
+	}
 }
 
 /*
@@ -74,7 +104,16 @@ void filter_any_index(char string[], char result[], char remove[]) {
  *****
  */
 char *filter_any_ptr(char *string, char* remove) {
-	return strcpy(malloc(1), "") ; // placeholder
+		char *p_copy = malloc(strlen(string)+1) ;
+	strcpy(p_copy,string) ;
+	while(remove[0]!=NUL){
+		p_copy = filter_ch_ptr(p_copy,remove[0]) ;
+		remove++ ;
+	}
+	char *p = malloc(strlen(p_copy)+1) ;
+	strcpy(p,p_copy) ;
+	free(p_copy) ;
+	return p ; // placeholder
 }
 
 /*
@@ -87,5 +126,20 @@ char *filter_any_ptr(char *string, char* remove) {
  *****
  */
 char *filter_substr(char *string, char* substr) {
-	return strcpy(malloc(1), "") ; // placeholder
+	char *p_copy = malloc(strlen(string)+1) ;
+	char *p = p_copy ;
+	while(string[0]!=NUL){
+		if(prefix(string,substr)){
+			string+=strlen(substr) ;
+		}else{
+			p[0] = string[0] ;
+			p++ ;
+			string++ ;
+		}	
+	}
+	p[0] = NUL ;
+	char *result = malloc(strlen(p_copy)+1) ;
+	strcpy(result,p_copy) ;
+	free(p_copy) ;
+	return result ; // placeholder
 }
