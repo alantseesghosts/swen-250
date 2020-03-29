@@ -80,14 +80,18 @@ appear when I attempt to switch or assign pointers in an improper order.
 ================================================================
 find_word
 Start
-Estimated Time	HH MM
+Estimated Time	01 30
 Plan:
 (Order of implementation, testing approach, etc.)
+Break return value requirements down separately and find what cases have in 
+common and what they are acking. Test after finishing the function.
 
 Complete
-Actual Time	HH MM
+Actual Time	01 15
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+I need to check for special cases before and after runnning 
+the while loop. Cases such as if  the list was empty
+or if the element needed to be added after the tail.
 
 ================================================================
