@@ -2,71 +2,96 @@ SWEN-250 Document Analysis Journal
 
 Implement these functions in the order below.
 
-Your name:
+Your name: Gideon Wikina
 
 ================================================================
 create_node
 Start
-Estimated Time	HH MM
+Estimated Time	01 00
 Plan:
 (Order of implementation, testing approach, etc.)
+I tried to follow the steps one at a time as the top of the function 
+comments required. Also, looking at lecture slides multiple times was a necessity.
+Tested at the end of completing the function.
 
 Complete
-Actual Time	HH MM
+Actual Time: 00 40
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
 
+No real problems with this function. Took me a little time to actually 
+understand what the problem wanting to do. Slowing down and taking the problem, 
+piece by piece was very helpful.
 
 ================================================================
 add_node_at_head
 Start
-Estimated Time	HH MM
+Estimated Time	00 30
 Plan:
 (Order of implementation, testing approach, etc.)
 
+follow the steps and hints carefully, test at the end of completing the 
+function.
+
 Complete
-Actual Time	HH MM
+Actual Time	00 45
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
 
+Was missing the cases where the function would return 0.
 
 ================================================================
 clear_linked_list
 Start
-Estimated Time	HH MM
+Estimated Time	00 45
 Plan:
 (Order of implementation, testing approach, etc.)
+Looked lecture notes to see if they would lend any help. Found a very similiar 
+example, used it as a guide. 
 
 Complete
-Actual Time	HH MM
+Actual Time: 00 25
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+
+Forgot to initialize the initial node_val to a integer. Overall, this function
+was simple in implementation. 
 
 
 ================================================================
 add_node_after_current
 Start
-Estimated Time	HH MM
+Estimated Time	00 45
 Plan:
 (Order of implementation, testing approach, etc.)
 
+Use add_node_to_head as a guide, but make
+loop to make sure it adds after the current, carefully
+make sure that each node points to the right pointer
+
 Complete
-Actual Time	HH MM
+Actual Time	00 45
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+Only problem encountered was a segmentation order that would
+appear when I attempt to switch or assign pointers in an improper order.
 
 
 ================================================================
 find_word
 Start
-Estimated Time	HH MM
+Estimated Time	01 30
 Plan:
 (Order of implementation, testing approach, etc.)
+Break return value requirements down separately and find what cases have in 
+common and what they are acking. Test after finishing the function.
 
 Complete
-Actual Time	HH MM
+Actual Time	01 15
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+I need to check for special cases before and after runnning 
+the while loop. Cases such as if  the list was empty
+or if the element needed to be added after the tail.
 
 ================================================================
