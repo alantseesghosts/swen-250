@@ -11,7 +11,8 @@ Estimated Time	01 00
 Plan:
 (Order of implementation, testing approach, etc.)
 I tried to follow the steps one at a time as the top of the function 
-comments required. Also, looking at lecture slides multiple times was a necessity. 
+comments required. Also, looking at lecture slides multiple times was a necessity.
+Tested at the end of completing the function.
 
 Complete
 Actual Time: 00 40
@@ -25,14 +26,21 @@ piece by piece was very helpful.
 ================================================================
 add_node_at_head
 Start
-Estimated Time	HH MM
+Estimated Time	00 30
 Plan:
 (Order of implementation, testing approach, etc.)
 
+follow the steps and hints carefully, test at the end of completing the 
+function.
+
 Complete
-Actual Time	HH MM
+Actual Time	00 45
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+
+Was missing the cases where the function would return 0.
+
+Forgot to initialize the initial node_val to a integer.
 
 
 ================================================================
