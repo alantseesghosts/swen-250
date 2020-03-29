@@ -10,6 +10,8 @@ Start
 Estimated Time	01 00
 Plan:
 (Order of implementation, testing approach, etc.)
+I tried to follow the steps one at a time as the top of the function 
+comments required. Also, looking at lecture slides multiple times was a necessity. 
 
 Complete
 Actual Time: 00 40
