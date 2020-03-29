@@ -40,20 +40,22 @@ Observations:
 
 Was missing the cases where the function would return 0.
 
-Forgot to initialize the initial node_val to a integer.
-
-
 ================================================================
 clear_linked_list
 Start
-Estimated Time	HH MM
+Estimated Time	00 45
 Plan:
 (Order of implementation, testing approach, etc.)
+Looked lecture notes to see if they would lend any help. Found a very similiar 
+example, used it as a guide. 
 
 Complete
-Actual Time	HH MM
+Actual Time: 00 25
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+
+Forgot to initialize the initial node_val to a integer. Overall, this function
+was simple in implementation. 
 
 
 ================================================================
