@@ -61,14 +61,20 @@ was simple in implementation.
 ================================================================
 add_node_after_current
 Start
-Estimated Time	HH MM
+Estimated Time	00 45
 Plan:
 (Order of implementation, testing approach, etc.)
 
+Use add_node_to_head as a guide, but make
+loop to make sure it adds after the current, carefully
+make sure that each node points to the right pointer
+
 Complete
-Actual Time	HH MM
+Actual Time	00 45
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+Only problem encountered was a segmentation order that would
+appear when I attempt to switch or assign pointers in an improper order.
 
 
 ================================================================
