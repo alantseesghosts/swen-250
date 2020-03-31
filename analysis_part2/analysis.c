@@ -107,6 +107,13 @@ struct word_entry get_next_word( struct linked_list *p_list )
 	struct word_entry entry ;
 	
 	entry.word_count = 0 ;		// cover end of list case.
+
+	if (p_list != NULL && p_list->p_current != NULL && p_list->p_current->p_previous != NULL){
+	  p_list->p_current = p_list->p_current->p_previous;
+	  entry.unique_word = p_list->p_current->one_word.unique_word;
+	  entry.word_count = p_list->p_current->one_word.word_count;
+	}
+
 	
 	return entry ;
 }
@@ -118,6 +125,12 @@ struct word_entry get_prev_word( struct linked_list *p_list )
 	struct word_entry entry ;
 	
 	entry.word_count = 0 ;		// cover end of list case.
+
+	if (p_list != NULL && p_list->p_tail != NULL){
+	  entry.unique_word = p_list->p_tail->one_word.unique_word;
+	  entry.word_count = p_list->p_tail->one_word.word_count;
+	  p_list->p_current = p_list->p_tail;
+	}
 	
 	return entry ;
 }
