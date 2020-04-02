@@ -1,5 +1,5 @@
 // Document Analysis project linked list functions
-// L. Kiser Feb. 20, 2018
+// Gideon Wikina.
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -16,14 +16,13 @@
 // This function returns a pointer to the allocated node.
 struct node *create_node( char *word )
 {
-	struct node *new_node = malloc(sizeof(struct node));
- 	 new_node->one_word.unique_word = malloc(strlen(word) * sizeof(char));
- 	 new_node->one_word.unique_word = word;
- 	 new_node->one_word.word_count = 1;
- 	 new_node->p_previous = NULL;
- 	 new_node->p_next = NULL;
- 	 return new_node;
-
+	struct node *created = malloc(sizeof(struct node)) ;
+	created->p_previous = NULL ;
+	created->p_next = NULL ;
+	created->one_word.unique_word = malloc(strlen(word)+1) ;
+	strlcpy(created->one_word.unique_word,word,strlen(word)+1) ;
+	created->one_word.word_count = 1 ;
+	return created ;	
 }
 
 // Inserts a node at the beginning of the linked list.
@@ -41,23 +40,19 @@ struct node *create_node( char *word )
 // Hint: be sure to maintain both the p_previous and p_next pointers in each node.
 int add_node_at_head( struct linked_list *p_list, char *word )
 {
-	if (p_list==NULL || word ==NULL || strlen(word) == 0){
-		return 0;
+	if((p_list==NULL)||(word==NULL)||(word[0]=='\0')){
+		return 0 ;
 	}
-	struct node *new_node = create_node(word);
-	if (p_list->p_head != NULL){
-   	 	new_node->p_next = p_list->p_head;
-    		p_list->p_head->p_previous = new_node;
-    		p_list->p_head = new_node;
+	struct node *added = create_node(word) ;
+	if(p_list->p_tail==NULL){
+		p_list->p_head = p_list->p_tail = p_list->p_current = added ;
+	}else{
+		struct node *old_head = p_list->p_head ;
+		old_head->p_previous = added ;
+		added->p_next = old_head ;
+		p_list->p_current = p_list->p_head = added ;
 	}
-  	else{
-		p_list->p_head = new_node;
-   		 p_list->p_tail = new_node;
- 	 }
-
-	p_list->p_current = new_node;
-	return 1 ;  
-	// REMOVE THIS and replace with working code
+	return 1 ;
 }
 
 // For the passed linked_list pointer free all of the nodes in the list.
@@ -67,20 +62,18 @@ int add_node_at_head( struct linked_list *p_list, char *word )
 // Lastly, return the number of nodes freed (which could be zero if p_list indicates an empty list).
 int clear_linked_list( struct linked_list *p_list )
 {
-	int node_val = 0;
-  	while (p_list->p_head != NULL){
-   		 struct node* current = p_list->p_head;
-   	 	p_list->p_head = p_list->p_head->p_next;
-   	 	current = NULL;
-   		 node_val++;
-  	}
- 	 if (p_list->p_tail != NULL){
-   		 p_list->p_tail = NULL;
-	  }	
-	  if (p_list->p_current != NULL){
-   		 p_list->p_current = NULL;
- 	 }
-	return node_val;
+	struct node *temp ;
+	int num_nodes = 0 ;
+	while(p_list->p_head!=NULL){
+		free(p_list->p_head->one_word.unique_word) ;
+		temp = p_list->p_head ;
+		p_list->p_head = p_list->p_head->p_next ;
+		free(temp) ;
+		num_nodes++ ;
+	}
+	p_list->p_tail = NULL ;
+	p_list->p_current = NULL ;
+	return num_nodes ;
 }
 
 
@@ -102,33 +95,28 @@ int clear_linked_list( struct linked_list *p_list )
 //       use the add_node_at_head function to create the new node.
 int add_node_after_current( struct linked_list *p_list, char *word )
 {
-	if (p_list == NULL || word == NULL || strlen(word) == 0){
-   		 return 0;
- 	 }
-	struct node *new_node = create_node(word);
- 	 if (p_list->p_current == NULL){
-   		 add_node_at_head(p_list, word);
- 	 }
- 	 else{
-   		 // New Node next, previous
-   		 new_node->p_previous = p_list->p_current;
-    		new_node->p_next = p_list->p_current->p_next;
-	
-   		 // Next node's previous will be new node
-   		 if (p_list->p_current->p_next != NULL){
-    			  p_list->p_current->p_next->p_previous = new_node;
-  		  }
-   	 // Current node next will be new node
-   	 p_list->p_current->p_next = new_node;
-	
-  	  p_list->p_current = new_node;
-   	 if (p_list->p_current->p_next == NULL){
-     		 p_list->p_tail = p_list->p_current;
-  	  }
- 	 }
-
-   return 1 ;
-
+	if((word[0]=='\0')||(word==NULL)||(p_list==NULL)){
+		return 0 ;
+	}
+	if(p_list->p_current==NULL){
+		add_node_at_head(p_list,word) ;
+		return 1 ;
+	}
+	struct node *temp = p_list->p_head ;
+	while(temp->one_word.unique_word!=p_list->p_current->one_word.unique_word){
+		temp = temp->p_next ;
+	}
+	struct node *added = create_node(word) ;
+	added->p_previous = temp ;
+	added->p_next = temp->p_next ;
+	temp->p_next = added ;
+	if(added->p_next==NULL){
+		p_list->p_tail = added ;
+	}else{
+		added->p_next->p_previous = added ;
+	}
+	p_list->p_current = added ;
+	return 1 ;
 }
 
 // Searches the linked list for the passed word.
@@ -159,26 +147,43 @@ int add_node_after_current( struct linked_list *p_list, char *word )
 // If any of these conditions are violated this function returns a -1 to indicate invalid input.
 int find_word( struct linked_list *p_list, char *word )
 {
-	if ( p_list == NULL || p_list->p_head == NULL || word == NULL || strlen(word) == 0){
-    		return -1;
-  }
-  	struct node* curNode = p_list->p_head;
-
-	while (curNode != NULL){
-    		int comp = strcmp(word, curNode->one_word.unique_word);
-    		if (comp < 0){
-     			 p_list->p_current = curNode->p_previous;
-     			 return 0;
-    		}
-    		if (comp == 0){
-      			p_list->p_current = curNode;
-      			return 1;
-    		}
-   		 if (comp > 0){
-      			curNode = curNode->p_next;
-    		}
-  	}
-  	p_list->p_current = p_list->p_tail;
-  	return 0;
+	if((word==NULL)||(word[0]=='\0')||(p_list==NULL)||(p_list->p_head==NULL)){
+		return -1 ;
+	}
+	struct node *start = p_list->p_head ;
+	int check = strcmp(start->one_word.unique_word,word) ;
+	if(check==0){
+		p_list->p_current = start ;
+		return 1 ;
+	}
+	if(check>0){
+		p_list->p_current = p_list->p_head->p_previous ;
+		return 0 ;
+	}
+	int old_check = check ;
+	while(start->p_next!=NULL){
+		check = strcmp(start->one_word.unique_word,word) ;
+		if(check==0){
+			p_list->p_current = start ;
+			return 1 ;
+		}
+		if((old_check<0)&&(check>0)){
+			p_list->p_current = start->p_previous ;
+			return 0 ;
+		}
+		start = start->p_next ;
+		old_check = check ;
+	}
+	check = strcmp(start->one_word.unique_word,word) ;
+        if(check==0){
+                p_list->p_current = start ;
+                return 1 ;
+        }
+	if((old_check<0)&&(check>0)){
+		p_list->p_current = start->p_previous ;
+		return 0 ;
+	}
+	p_list->p_current = start ;
+	return 0 ;
 }
 
