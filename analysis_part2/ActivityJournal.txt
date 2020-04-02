@@ -2,123 +2,149 @@ SWEN-250 Document Analysis Journal
 
 Implement these functions in the order below.
 
-Your name:
+Your name:	Gideon Wikina
 
 ================================================================
 process_word
 Start
-Estimated Time	HH MM
+Estimated Time	01 00
 Plan:
 (Order of implementation, testing approach, etc.)
+	Read the code comments carefully, look over the functions
+	that could be used from previous code in part 1, test 
+	after each attempt
 
 Complete
-Actual Time	HH MM
+Actual Time	00 45
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	The in code comments helped me implement things the 
+	most, i used functions from the part 1 of the project,
+	and took a look at the unit tests to see exactly what
+	i need to have happen
 
 ================================================================
 get_first_word
 Start
-Estimated Time	HH MM
+Estimated Time	01 00
 Plan:
 (Order of implementation, testing approach, etc.)
-
+	follow the instructions from the comments at the top of
+	the code, implement as the instructions state, run tests
+	if the tests fail check the unit tests to see why
 Complete
-Actual Time	HH MM
+Actual Time	00 30
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	the comment codes made it easy to implement without 
+	any issues
 
 ================================================================
 get_next_word
 Start
-Estimated Time	HH MM
+Estimated Time	00 10
 Plan:
 (Order of implementation, testing approach, etc.)
-
+	follow the same ideas for implementation and approach
+	from the previous function
 Complete
-Actual Time	HH MM
+Actual Time	00 12
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	followed the same idea as the previous function and
+	all implementation went smoothly
 
 ================================================================
 get_last_word
 Start
-Estimated Time	HH MM
+Estimated Time	00 30
 Plan:
 (Order of implementation, testing approach, etc.)
-
+	follow the steps from get_first_word and get_next_word
+	implement the same structure, follow the code instructions
 Complete
-Actual Time	HH MM
+Actual Time	00 13
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	function followed the same structure as the previous two 
+	functions making implementation quick and simple
 
 ================================================================
 get_prev_word
 Start
-Estimated Time	HH MM
+Estimated Time	00 10
 Plan:
 (Order of implementation, testing approach, etc.)
-
+	follow the code instructions, implement the same 
+	structure from get_next_word
 Complete
-Actual Time	HH MM
+Actual Time	00 03
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	implemented the same code as get_next_word
 
 ================================================================
 read_file through test 56
 Start
-Estimated Time	HH MM
+Estimated Time	01 00
 Plan:
 (Order of implementation, testing approach, etc.)
+	follow a similar structure to the word count program
+	from an earlier activity, make changes to implementation
+	to add words to linked list
 
 Complete
-Actual Time	HH MM
+Actual Time	00 30
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	implemention proved to be simple, I didn't use one of the
+	int variables the default skeleton included
 
 ================================================================
 read_file MLK_dream_excerpt only
 Start
-Estimated Time	HH MM
+Estimated Time	00 10
 Plan:
 (Order of implementation, testing approach, etc.)
+	make edits to match the file example
 
 Complete
-Actual Time	HH MM
+Actual Time	00 15
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	implementation was simple and worked well, worked
+	fine from original read_file tests 
 
 ================================================================
 write_unique_word_list_to_csv_file
 Start
-Estimated Time	HH MM
+Estimated Time	00 45
 Plan:
 (Order of implementation, testing approach, etc.)
+	follow skeletion implementation and use previous 
+	functions
 
 Complete
-Actual Time	HH MM
+Actual Time	00 30
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	implementation was simple and I used the previous 
+	functions to easily implement the code
 
 ================================================================
 Add four unit tests to the unit_tests_student.c file
 Start
-Estimated Time	HH MM
+Estimated Time	00 30
 Plan:
 (Order of implementation, testing approach, etc.)
+	follow similar structure to already provide tests cases
 
 Complete
-Actual Time	HH MM
+Actual Time	00 25
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+	followed the same structure as the asserts from the two
+	already provided test cases and implemented as 
+	instructed from in code comments
 
 ================================================================
