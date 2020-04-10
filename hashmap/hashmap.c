@@ -57,11 +57,10 @@ static struct binEntry *hashtable[BINSIZE];     /* table of binEntry pointers */
  ************************************************************/
 unsigned int hash(char *key) 
 {
-	unsigned int hashvalue = 0;
-	unsigned int count; 
+	unsigned int hashvalue = 0; 
 
-	for(count = 0; key[count] != '\0'; count++ )
-		hashvalue = key[count] + (hashvalue << 6) + (hashvalue << 16) - hashvalue;
+	for(hashvalue  = 0; *key != '\0'; key++ )
+		hashvalue = *key + 31 * hashvalue;
 
 	//YOUR CODE HERE
 
@@ -82,7 +81,10 @@ e.g. strcmp('abc','abc') == 0 //would evaluate to true
 struct binEntry *lookup(char *key)
 {
 	struct binEntry  *entry;
-	// YOUR CODE HERE
+	// YOUR CODE HERE 
+	for( entry = hashtable[hash(key)] ; entry != NULL ; entry = entry->next)
+		if ( strcmp( key, entry->key) == 0)
+			return entry;
 	return NULL;
 }
 
