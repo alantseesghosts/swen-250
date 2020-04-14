@@ -122,26 +122,23 @@ struct binEntry *insert(char *key,  char *value)
  ***************************************************************/
 void drop(char *key)
 {
-
-   //get the hash 
-   int hashIndex = hash(key);
-   struct binEntry *entry = lookup(key);
-   free(hashtable[hashIndex]);
-   //move in array until an empty
-   while(hashtable[hashIndex] != NULL && entry != NULL) {
-	
-      if(hashtable[hashIndex]->key == key) {
-         hashtable[hashIndex] = entry -> next; 
-      }
-		
-      //go to next cell
-      ++hashIndex;
-		
-      //wrap around the table
-      hashIndex %= BINSIZE;
-   }  
-
-
+	struct binEntry *entry;
+	unsigned int hashIndex;  
+	entry = lookup(key);
+	if(entry != NULL){
+		if(entry -> prev == NULL){
+			hashIndex = hash(key);
+			hashtable[hashIndex] = entry -> next;
+		}
+		else{
+			(entry->prev)-> next = entry -> next; 
+		}
+		if(entry->next != NULL)
+			(entry->next)->prev = entry-> prev;
+		free(entry->key);
+		free(entry->value);
+		free(entry);
+		}
 }
 
 /**************************************************************************
