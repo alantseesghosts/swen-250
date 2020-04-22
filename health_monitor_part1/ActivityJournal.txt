@@ -60,14 +60,19 @@ were better for this scenario.
 
 ===========  Stage 4  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	02 00
 Plan:
 (Order of implementation, testing approach, estimation technique)
-
+My plan is to work on the code bit by bit and see if what i did works
+If not change the approach, if it does, keep going forward
+I will make very large test files to check to see my overflow works properly
 Complete
-Actual Time	HH MM
+Actual Time	03 00
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+There were really no problems with this section
+It was adding a few if statements while it's collecting data. My biggest issue
+was fatigue from this project as a whole.
 
 
 ===========  Stage 5  ==========================================
