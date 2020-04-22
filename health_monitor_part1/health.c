@@ -38,7 +38,8 @@ typedef struct{
 Chart record[MAXPATIENTS];	
 
 void main(){
-int i, j;
+int i = 0;
+int j = 0;
 
 /* initialize health data records for each patient */
 
@@ -55,20 +56,37 @@ int id;
 int hours;
 int mins;
 int secs;
-int field;
-int score;
-get_field(&id, &hours, &mins, &secs, &field, &score);
-printf("%d This is the ID\n", id);
-printf("%d This is the hours\n", hours);
-printf("%d This is the mins\n", mins);
-printf("%d This is the secs\n", secs);
-printf("%d This is the field\n", field);
-printf("%d This is the score\n", score);
+int type;
+int value;
+get_field(&id, &hours, &mins, &secs, &type, &value);
+printf("Readings for Patient ID = %d \n", id);
+if (type == 1){
+	printf("Temperature: \n");
+	printf("%d:%d:%d:  %d \n", hours, mins, secs, value);
+}
+if (type == 2){
+	printf("Heart Rate: \n");
+	printf("%d:%d:%d:  %d \n", hours, mins, secs, value);
+}
+if (type == 3){
+	printf("Systolic Pressure: \n");
+	printf("%d:%d:%d:  %d \n", hours, mins, secs, value);
+}
+if (type == 4){
+	printf("Diastolic Pressure: \n");
+	printf("%d:%d:%d:  %d \n", hours, mins, secs, value);
+}
+if (type == 5){
+	printf("Respiration Rate: \n");
+	printf("%d:%d:%d:  %d \n", hours, mins, secs, value);
+}
+if (type == 6){
+	printf("%d, %d:%d:%d, %d, %d \n", id, hours, mins, secs, type, value);
+}
 
 printf("\nEnd of Input\n");
-
 }
-int  get_field(int* id, int* hours, int* mins, int* secs, int* field, int* score){
+int get_field(int* id, int* hours, int* mins, int* secs, int* type, int* value){
         //get the patient ID
         int z = getchar();
         *id = z;
@@ -79,7 +97,7 @@ int  get_field(int* id, int* hours, int* mins, int* secs, int* field, int* score
 
         char j[MAXTIME];
         int m,n = 0;
-        while((n=getchar()) != ':'){
+        while ((m < (MAXTIME - 1)) && ((n=getchar()) != '\n')){
                 j[m] = n;
                 m++;
         }
@@ -90,7 +108,7 @@ int  get_field(int* id, int* hours, int* mins, int* secs, int* field, int* score
         char k[MAXTIME];
         n = 0;
         m = 0;
-        while((n=getchar()) != ':'){
+        while ((m < (MAXTIME - 1)) && ((n=getchar()) != ':')){
                 k[m] = n;
                 m++;
         }
@@ -101,7 +119,7 @@ int  get_field(int* id, int* hours, int* mins, int* secs, int* field, int* score
         char l[MAXTIME];
         n = 0;
         m = 0;
-        while((n=getchar()) != ':'){
+        while ((m < (MAXTIME - 1)) && ((n=getchar()) != ':')){
                 l[m] = n;
                 m++;
         }
@@ -113,7 +131,7 @@ int  get_field(int* id, int* hours, int* mins, int* secs, int* field, int* score
         // this gets the field
 
         z = getchar();
-        *field = z;
+        *type = z;
         getchar();
         getchar();
 
@@ -122,10 +140,10 @@ int  get_field(int* id, int* hours, int* mins, int* secs, int* field, int* score
         m = 0;
         n = 0;
         char x[MAXTIME];
-        while ((n=getchar()) != '\n'){
-                x[m] = n;
+        while ((m < (MAXTIME - 1)) && ((n=getchar()) != '\n')){        
+		x[m] = n;
                 m++;
         }
-        *score = atoi(x);
-	return 0;
+        *value = atoi(x);
+        return 0;
 }
