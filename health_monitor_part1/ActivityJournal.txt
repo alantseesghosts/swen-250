@@ -43,14 +43,19 @@ and it was causing many problems.
 
 ===========  Stage 3  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	03 00
 Plan:
 (Order of implementation, testing approach, estimation technique)
+For testing I will use the example input and compare it with the sample output
+I chose this amount of time because I tend to be getting faster and understanding 
+the concepts more, and I feel like I know where this stage is going.
 
 Complete
-Actual Time	HH MM
+Actual Time	02 30
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+At first, I tried to use if statements. I realized that using switch statememnts
+were better for this scenario. 
 
 
 ===========  Stage 4  ==========================================
