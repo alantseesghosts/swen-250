@@ -1,0 +1,73 @@
+SWEN-250 Project Activity Journal
+C Health Monitoring System Project - Part 1
+
+Name: Gideon Wikina
+
+===========  Stage 1  ==========================================
+Start 
+Estimated Time 01 00
+Plan:
+(Order of implementation, testing approach, estimation technique)
+My plan is to implement the code the way that I think it will work at first
+I will try to test this code, and then go back and fix any issues and 
+fix any gramatical things in the print statement if needed.  I will test by using
+sample input from various paragraphs in the project write up.  
+I chose this amount of time because parsing a single line of code and printing it
+isn't the hardest function to write.
+
+Complete
+Actual Time	06 00
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+Not gonna lie, I realized that parsing through this kind of input was more 
+difficult than I thought.After having a lot of problems with getchar(), 
+decided to use scanf().This was also more difficult to use as I had never used 
+it before, lots of google needed to try to figure out how to use scanf properly.
+
+===========  Stage 2  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+===========  Stage 3  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+===========  Stage 4  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+===========  Stage 5  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
