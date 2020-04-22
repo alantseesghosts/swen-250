@@ -77,11 +77,16 @@ was fatigue from this project as a whole.
 
 ===========  Stage 5  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	01 30
 Plan:
 (Order of implementation, testing approach, estimation technique)
-
+I think that my code already works with this stage because I set it to already 
+end at EOF
+testing will be done with the first example of input in the project write up
+I chose this amount of time because it should be simple.
 Complete
-Actual Time	HH MM
+Actual Time	02 00
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+A lot of errors that I had to go fix, still have a lot of warnings, but it 
+works well.
