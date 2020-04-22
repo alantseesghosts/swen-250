@@ -27,14 +27,18 @@ it before, lots of google needed to try to figure out how to use scanf properly.
 
 ===========  Stage 2  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	02 30
 Plan:
 (Order of implementation, testing approach, estimation technique)
-
+My plan of implementation is to try to add the new features that are needed.
+Testing will be using the examples that were given to us and seeing if my code
+matches the output.
 Complete
-Actual Time	HH MM
+Actual Time	03 00
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+A major problem I had was however copying over an array, my indexes were off 
+and it was causing many problems.
 
 
 ===========  Stage 3  ==========================================
