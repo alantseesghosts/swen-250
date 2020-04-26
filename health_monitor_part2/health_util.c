@@ -59,7 +59,17 @@ void addHealthType( int patientID, int newType ){
 *  getChart: given a patientID, return a pointer to their Chart
 */
 Chartptr getChart( int patientID ){
-  Chartptr foundChart = NULL;
+  	Chartptr foundChart = NULL;
+	Chartptr iterator = patientList;
+	while(iterator != NULL){
+		if(iterator->id == patientID){
+			foundChart = iterator;
+			return foundChart;
+		}
+		else{
+			iterator = iterator->next;
+		}
+	}
   
   /* YOUR CODE HERE */
   
