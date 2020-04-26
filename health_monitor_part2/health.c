@@ -113,6 +113,13 @@ switch(type){
 				}
 				printf("--------------------------------------------------\n");
 				break;
+	case 7:
+				//Checks in a patient
+				printf("--------------------------------------------------\n");
+				addPatient(id);
+				printf("%s: PatientID = %i checking in\n", &time[MAXTIME + 1], id);
+				printf("--------------------------------------------------\n");
+				break;
 
 }
 }
