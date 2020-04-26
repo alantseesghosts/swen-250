@@ -38,7 +38,7 @@ printf("Welcome to the Health Monitoring System\n\n");
 	CBuffptr patientHealth; //a buffer pointer to get the health records to add in a new health reading
 	//a character array to keep track of all of the types of readings
 	char* types[] = {"Temperature:", "Heart Rate:", "Systolic Pressure:", "Diastolic Pressure:", "Respiration Rate"};
-	Chartptr checking;//Pointer to make sure that the chart of the patient doesn't equal NULL
+	Chartptr chart;//Pointer to make sure that the chart of the patient doesn't equal NULL
 	CBuffptr patientPrint; //A bufferpointer used during the print case
 
 //A while loop that will keep scanning until the input is "End of File"
@@ -53,6 +53,24 @@ switch(type){
 		//calls a function that just removes the health values but keeps the chart intact
 		removeHealthBuff(id);
 		break;
+	//To avoid  redundancy and set all the cases will to drop until case 5. Here the action will take place.
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+				chart = getChart(id);
+				//Checks to see if the chart is NULL
+				if(chart == NULL){
+					break;
+				}
+				//if not NULL, it  will get the health type buffer
+				patientHealth = getHealthType(id, type);
+				//if it isn't NULL, then it will add the health reading
+				if(patientHealth != NULL){
+					addHealthReading(patientHealth, &time[MAXTIME + 1], value);
+				}
+				break;		
 
 
 }
