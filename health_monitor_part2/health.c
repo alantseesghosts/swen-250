@@ -120,6 +120,13 @@ switch(type){
 				printf("%s: PatientID = %i checking in\n", &time[MAXTIME + 1], id);
 				printf("--------------------------------------------------\n");
 				break;
+	case 8:
+				//checks out a patient 
+				printf("--------------------------------------------------\n");
+				printf("%s: Patient ID = %i  checking out\n", &time[MAXTIME + 1], id);
+				printf("--------------------------------------------------\n");
+				removePatient(id);
+				break;			
 
 }
 }
