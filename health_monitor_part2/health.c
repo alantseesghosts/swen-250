@@ -71,7 +71,48 @@ switch(type){
 					addHealthReading(patientHealth, &time[MAXTIME + 1], value);
 				}
 				break;		
-
+	case 6:
+				//checks to see if the chart is NULL
+				chart = getChart(id);
+				if(chart == NULL){
+					break;
+				}
+				//goes through each data type in the types array and print out each of their readings
+				buffIndex = 0;
+				printf("--------------------------------------------------\n");
+				printf("Readings for Patient ID = %i are:\n", id);
+				for(buffIndex; buffIndex < 5; buffIndex++){
+					printf("%s\n", types[buffIndex]);
+					patientPrint = getHealthType(id, buffIndex+1);
+					if(patientPrint == NULL){
+						printf("<none>\n");
+					}
+					else{
+						readIndex = 0;
+						if(patientPrint->end < MAXREADINGS){
+							for(readIndex; readIndex < patientPrint->end; readIndex++){
+								if(buffIndex == 0){
+									printf("%s: %.1f\n", patientPrint->reading[readIndex].timestamp, patientPrint->reading[readIndex].value / 10.0);
+								}
+								else{
+									printf("%s: %i\n", patientPrint->reading[readIndex].timestamp, patientPrint->reading[readIndex].value);
+								}
+							}
+						}
+						else{
+							for(readIndex; readIndex < MAXREADINGS; readIndex++){
+                                                                if(buffIndex == 0){
+                                                                        printf("%s: %.1f\n", patientPrint->reading[readIndex].timestamp, patientPrint->reading[readIndex].value / 10.0);
+                                                                }
+                                                                else{
+                                                                        printf("%s: %i\n", patientPrint->reading[readIndex].timestamp, patientPrint->reading[readIndex].value);
+                                                                }
+                                                        }
+						}
+					}
+				}
+				printf("--------------------------------------------------\n");
+				break;
 
 }
 }
