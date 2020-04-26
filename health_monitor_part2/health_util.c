@@ -82,7 +82,18 @@ Chartptr getChart( int patientID ){
 *  for that patient, return NULL
 */
 CBuffptr getHealthType( int patientID, int healthType ){
-  CBuffptr foundType = NULL;
+ 	CBuffptr foundType = NULL;
+  	Chartptr patientChart = getChart(patientID);
+	CBuffptr buff = patientChart -> buffer;
+	while( buff != NULL){
+		if( buff->type == healthType){
+			foundType = buff;
+			return foundType;
+		}
+		else{
+			buff = buff->next;
+		}
+	}
   
   /* YOUR CODE HERE */
   
@@ -94,8 +105,11 @@ CBuffptr getHealthType( int patientID, int healthType ){
 *  timestamp and health data type reading to the buffer
 */
 void addHealthReading( CBuffptr buffer, char* timestamp, int reading ){
+  	/* YOUR CODE HERE */
+	buffer->reading[(buffer->end)%10].value = reading;
+	strcpy(buffer->reading[(buffer->end)%10].timestamp, timestamp);
+	buffer->end += 1;
 
-  /* YOUR CODE HERE */
 }
   
 /*
@@ -106,7 +120,37 @@ void addHealthReading( CBuffptr buffer, char* timestamp, int reading ){
 */
 void removePatient( int patientID ){
 
-  /* YOUR CODE HERE */
+  	/* YOUR CODE HERE */
+	Chartptr patient = getChart(patientID);
+	Chartptr update = patientList;
+	CBuffptr curr = patient->buffer;
+	Chartptr test;
+	CBuffptr currNext;
+	while(curr != NULL){
+		currNext = curr->next;
+		free(curr);
+		curr = currNext;
+	}
+	patient->buffer = NULL;
+	if(update->id == patientID){
+		patientList = patientList->next;
+		update->next =  NULL;
+	        patient->next = NULL;
+        	free(patient);
+	}
+	else{
+		while(update->next->id != patientID){
+                update = update->next;
+	        }
+        	update->next = update->next->next;
+	        patient->next = NULL;
+        	free(patient);
+	}
+	test = patientList;
+	while(test != NULL){
+		printf("UPDATED LIST: %i", test->id);
+		test = test->next;
+	}
   }
  
 /*
