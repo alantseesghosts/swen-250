@@ -1,0 +1,84 @@
+4010-250 Project Journal
+C Health Monitoring System Project - Part 2
+
+Name:
+
+===========  Stage 1  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+===========  Stage 2  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+===========  Stage 3  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+===========  Stage 4  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+===========  Stage 5  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+===========  Stage 6  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+===========  Stage 7  ==========================================
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, estimation technique)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
