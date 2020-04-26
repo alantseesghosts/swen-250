@@ -159,3 +159,14 @@ void removePatient( int patientID ){
 * static void myOptionalFunc(){ }  // EXAMPLE
 *  
 */
+void removeHealthBuff( int patientID ){
+	Chartptr patient = getChart( patientID );
+	CBuffptr curr = patient->buffer;
+	CBuffptr currNext;
+	while( curr != NULL){
+		currNext = curr->next;
+		free(curr);
+		curr = currNext;
+	}
+	patient->buffer = NULL;
+}
