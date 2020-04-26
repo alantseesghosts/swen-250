@@ -41,16 +41,22 @@ printf("Welcome to the Health Monitoring System\n\n");
 	Chartptr checking;//Pointer to make sure that the chart of the patient doesn't equal NULL
 	CBuffptr patientPrint; //A bufferpointer used during the print case
 
+//A while loop that will keep scanning until the input is "End of File"
+while(scanf("%i, %8[^,], %i, %i", &id, &time[MAXTIME + 1], &type, &value)!= EOF){
+//switches the case based on the type
+switch(type){
+	//type to reset the patient values
+	case 0:
+		printf("--------------------------------------------------\n");
+		printf("%s: Patient ID = %i reset data\n", &time[MAXTIME + 1], id);
+		printf("--------------------------------------------------\n");
+		//calls a function that just removes the health values but keeps the chart intact
+		removeHealthBuff(id);
+		break;
 
 
-
-
-
-
-
-
-
-
+}
+}
 printf("\nEnd of Input\n");
 
 }
