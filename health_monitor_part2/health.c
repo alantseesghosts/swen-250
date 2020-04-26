@@ -29,6 +29,28 @@ printf("Welcome to the Health Monitoring System\n\n");
 *  (4) Continue (1)-(3) until EOF
 */
 
+	int id; //variable to keep track of scanf's id imput
+	char time[MAXTIME + 1]; //variable to keep track of scanf's time input
+	int type; //variable to keep track of the type
+	int value; // variable to keep track of the value
+	int buffIndex; //variable for print statement to keep track of number of buffers
+	int readIndex;//variable for print case to keep track of the readings in the buffer
+	CBuffptr patientHealth; //a buffer pointer to get the health records to add in a new health reading
+	//a character array to keep track of all of the types of readings
+	char* types[] = {"Temperature:", "Heart Rate:", "Systolic Pressure:", "Diastolic Pressure:", "Respiration Rate"};
+	Chartptr checking;//Pointer to make sure that the chart of the patient doesn't equal NULL
+	CBuffptr patientPrint; //A bufferpointer used during the print case
+
+
+
+
+
+
+
+
+
+
+
 printf("\nEnd of Input\n");
 
 }
