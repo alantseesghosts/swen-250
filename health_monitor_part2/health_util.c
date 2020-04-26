@@ -42,7 +42,17 @@ void addPatient( int patientID ){
 */
 void addHealthType( int patientID, int newType ){
   
-  /* YOUR CODE HERE */ 
+  /* YOUR CODE HERE */
+	CBuffptr healthType = getHealthType(patientID, newType);
+	Chartptr patient = getChart(patientID);
+	if(healthType == NULL && patient != NULL){
+		CBuffptr newHealthType = malloc(sizeof(CircularBuffer));
+		newHealthType->type = newType;
+		newHealthType->start = 0;
+		newHealthType->end = 0;
+		newHealthType->next = patient->buffer;
+		patient->buffer = newHealthType;
+	}
   }
   
 /*
