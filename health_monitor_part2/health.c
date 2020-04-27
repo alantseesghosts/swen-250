@@ -5,6 +5,7 @@
 #include "health.h"
 
 #define MAXLINE 20 //most possible characters in a line
+//Gideon Wikina
 
 /*
 * Main function for the Health Monitoring System. Primarily responsible for
@@ -18,7 +19,7 @@ Chartptr patientList = NULL;    /* Define global variable patientList (declared 
 
 void main(){
 
-	printf("Welcome to the Health Monitoring System\n\n");
+	printf("Welcome to the Health Monitoring System\n");
 
 /*
 *  YOUR CODE GOES HERE:

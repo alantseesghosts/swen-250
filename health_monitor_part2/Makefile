@@ -10,4 +10,13 @@ testhealth.o: testhealth.c health.h
 	cc -c testhealth.c
 clean:
 	rm -f *.o health
-	
+test1:
+	./health < test1.txt
+
+
+test2:
+	./health < test2.txt
+
+
+test3:
+	./health < test3.txt	
