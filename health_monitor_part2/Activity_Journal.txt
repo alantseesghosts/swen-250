@@ -1,19 +1,25 @@
 4010-250 Project Journal
 C Health Monitoring System Project - Part 2
 
-Name:
+Name: Gideon Wikina
 
 ===========  Stage 1  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	01 30
 Plan:
 (Order of implementation, testing approach, estimation technique)
+I can first introduce this by adding addPatient and then go to the main feature 
+in health.c Checking will be achieved by trying to verify the patient's 
+ID and print it out to make sure they fit.
 
 Complete
-Actual Time	HH MM
+Actual Time	00 45
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+The longest part of this process was to find out what the systems really stood 
+for, and how to use them properly. 
+It was pretty easy having worked out how to use the constructs to work out the 
+rest.
 ===========  Stage 2  ==========================================
 Start
 Estimated Time	HH MM
