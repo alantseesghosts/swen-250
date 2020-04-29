@@ -81,14 +81,17 @@ and this also caused me panic.
 
 ===========  Stage 5  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	00 05
 Plan:
 (Order of implementation, testing approach, estimation technique)
-
+For testing I will run it with the sample input they give us and I will 
+check to see if the output looks correct.
 Complete
-Actual Time	HH MM
+Actual Time	00 30
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+Tests were not working with single inputs, but was working okay with multiple 
+inputs.Think problem with printing.
 
 ===========  Stage 6  ==========================================
 Start
