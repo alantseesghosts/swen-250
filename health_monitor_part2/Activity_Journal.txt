@@ -95,14 +95,16 @@ inputs.Think problem with printing.
 
 ===========  Stage 6  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	00 30
 Plan:
 (Order of implementation, testing approach, estimation technique)
+Try & try hard
 
 Complete
-Actual Time	HH MM
+Actual Time	00 30
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+Printing is an issue in my testing stage.
 
 ===========  Stage 7  ==========================================
 Start
