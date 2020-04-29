@@ -60,14 +60,23 @@ correctly connected together.
 
 ===========  Stage 4  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	01 00
 Plan:
 (Order of implementation, testing approach, estimation technique)
+I believe this will take longer than most because now I have to add to health 
+data that means that I have to incorporate "addHealthReading" as well as 
+implementing cases 1-6 in my switch statement in health.c Checking will be done
+with the sample input to see whether it works well with the output.
 
 Complete
-Actual Time	HH MM
+Actual Time	02 00
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+I was messing up the way I was working through the time to incorporate 
+HealthReading. This causes me to think and see if I had messed up in all. I 
+find an mistake in one of my other functions a pro of doing this. Another where 
+I messed up was that in my print statements I used the wrong index variables
+and this also caused me panic.
 
 
 ===========  Stage 5  ==========================================
