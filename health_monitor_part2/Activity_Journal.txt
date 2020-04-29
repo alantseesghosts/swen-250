@@ -108,11 +108,14 @@ Printing is an issue in my testing stage.
 
 ===========  Stage 7  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	00 30
 Plan:
 (Order of implementation, testing approach, estimation technique)
+My testing approach will be to run through the input that was given to us at 
+the beginning of the write up
 
 Complete
-Actual Time	HH MM
+Actual Time	00 30
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+Works for the most part, imma just turn it in.
