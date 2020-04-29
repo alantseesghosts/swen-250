@@ -42,15 +42,21 @@ was called This was only to test that all was correctly linking
 
 ===========  Stage 3  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	00 15
 Plan:
 (Order of implementation, testing approach, estimation technique)
+I assume I had correctly introduced my system from the very beginning to keep
+working with multiple input lines and to be able to store more than one patient
+at a time. 
+I'm going to check with a simple while loop that prints patients out.
 
 Complete
-Actual Time	HH MM
+Actual Time	00 05
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
-
+My code worked perfectly with what should have been done at this point. 
+The five minutes included writing a print statement and ensuring it was 
+correctly connected together.
 
 ===========  Stage 4  ==========================================
 Start
