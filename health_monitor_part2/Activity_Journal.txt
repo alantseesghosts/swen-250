@@ -22,14 +22,22 @@ It was pretty easy having worked out how to use the constructs to work out the
 rest.
 ===========  Stage 2  ==========================================
 Start
-Estimated Time	HH MM
+Estimated Time	01 30
 Plan:
 (Order of implementation, testing approach, estimation technique)
+I expect to implement most of the functions in health util, and then incorporate 
+what needs to happen in part two of the main function. 
+My research methodology will be close to Part 1 I will enter the code given in 
+the Part 2 examples, and then add the printed statements
 
 Complete
-Actual Time	HH MM
+Actual Time	01 15
 Observations:
 (Lessons learned, problems encountered, obstacles overcome, etc.)
+It wasn't terrible to upgrade the key function, it was just calling a one function. 
+The most time consuming items were implementing 3 of the utility functions. 
+I then wrote A while loop to print out each buffer and its nexts each time it 
+was called This was only to test that all was correctly linking
 
 
 ===========  Stage 3  ==========================================
